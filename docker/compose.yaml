@@ -1,0 +1,39 @@
+name: teamobi2026-local
+services:
+  db:
+    image: mariadb:10.4.32
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:?Missing DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: team2026
+      MYSQL_USER: teamobi
+      MYSQL_PASSWORD: ${DB_PASSWORD:?Missing DB_PASSWORD}
+      TZ: Asia/Ho_Chi_Minh
+    volumes:
+      - database:/var/lib/mysql
+      - "../database team2026.sql:/docker-entrypoint-initdb.d/01-team2026.sql:ro"
+    healthcheck:
+      test: [CMD-SHELL, 'MYSQL_PWD="$$MYSQL_ROOT_PASSWORD" mysqladmin ping -h 127.0.0.1 -u root --silent']
+      interval: 5s
+      timeout: 5s
+      retries: 60
+      start_period: 30s
+    restart: unless-stopped
+  game:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    environment:
+      TZ: Asia/Ho_Chi_Minh
+    volumes:
+      - ./Config.properties:/app/Config.properties:ro
+    ports:
+      - "127.0.0.1:14445:14445"
+    depends_on:
+      db:
+        condition: service_healthy
+    stdin_open: true
+    tty: true
+    init: true
+    stop_grace_period: 30s
+volumes:
+  database:

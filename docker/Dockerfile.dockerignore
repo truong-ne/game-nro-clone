@@ -1,0 +1,8 @@
+**
+!SRC/
+!SRC/20.jar
+!SRC/data/
+!SRC/data/**
+!SRC/maintenanceConfig.txt
+!docker/
+!docker/Dockerfile
