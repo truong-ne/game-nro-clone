@@ -1,2 +1,1 @@
-.env
-Config.properties
+# Full migration snapshot: local Docker configuration is included intentionally.

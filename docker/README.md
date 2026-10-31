@@ -24,10 +24,10 @@ docker compose -f docker/compose.yaml stop
 
 - Java 21 chạy bản có sẵn `SRC/20.jar`; không biên dịch lại source.
 - MariaDB 10.4.32, cùng phiên bản ghi trong file SQL đi kèm.
-- Database `team2026` tự import từ `database team2026.sql` khi volume được tạo lần đầu.
+- Database `team2026` tự import khi volume được tạo lần đầu. Biến `DB_INIT_SQL=./database-current.sql` trong `.env` chọn bản sao database mới nhất; nếu không có biến này thì dùng file gốc `database team2026.sql`.
 - Dữ liệu database lưu trong volume `teamobi2026-local_database`, được giữ khi stop/start hoặc recreate container.
 - `Config.properties` ở thư mục docker là bản cấu hình riêng: host database `db`, tài khoản `teamobi`, IP client `127.0.0.1`.
-- `.env` chứa mật khẩu database được tạo riêng. Giữ file này và `Config.properties`; không chia sẻ chúng.
+- `.env` chứa mật khẩu database được tạo riêng. Theo yêu cầu chuyển máy, bản sao Git có kèm file này và `Config.properties`.
 - Không sửa các file Java, JAR hoặc cấu hình Windows trong SRC.
 - Dockerfile tạo thêm bản `data/map/tile_set_info` từ `tile_set_Info` bên trong image để tương thích tên file trên Linux.
 - Bản thử nghiệm không tự khởi động lại container game khi ứng dụng tự thoát; mở lại bằng `start.cmd`.

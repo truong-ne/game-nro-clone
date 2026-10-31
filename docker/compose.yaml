@@ -10,7 +10,7 @@ services:
       TZ: Asia/Ho_Chi_Minh
     volumes:
       - database:/var/lib/mysql
-      - "../database team2026.sql:/docker-entrypoint-initdb.d/01-team2026.sql:ro"
+      - "${DB_INIT_SQL:-../database team2026.sql}:/docker-entrypoint-initdb.d/01-team2026.sql:ro"
     healthcheck:
       test: [CMD-SHELL, 'MYSQL_PWD="$$MYSQL_ROOT_PASSWORD" mysqladmin ping -h 127.0.0.1 -u root --silent']
       interval: 5s
