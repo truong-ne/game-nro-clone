@@ -1,0 +1,246 @@
+{
+  "_comment": "Item economy data (build tag wip_items). Values ported from the legacy Java server; each block names its source file:line in _src. Edit and rebuild.",
+
+  "craft_npc": 21,
+
+  "upgrade": {
+    "_src": "combine/NangCapVatPham.java:126-262, combine/CombineSystem.java:227-323, CombineService.java:22",
+    "max_level": 8,
+    "stone_by_type": {"0": 223, "1": 222, "2": 224, "3": 221, "4": 220},
+    "protect_item": 987,
+    "stones": [3, 7, 11, 17, 23, 35, 50, 70],
+    "gold": [10000, 70000, 300000, 1500000, 7000000, 23000000, 100000000, 250000000],
+    "rate": [80, 50, 20, 10, 7, 5, 1, 0.3],
+    "downgrade_levels": [2, 4, 6],
+    "main_options": [47, 6, 0, 7, 14, 22, 23],
+    "side_options": [27, 28],
+    "level_option": 72,
+    "downgrade_counter_option": 209
+  },
+
+  "crystallize": {
+    "_src": "combine/PhaLeHoaTrangBi.java:65-214 (real ratio, not the displayed fake one), CombineSystem.java:13-19,137-225",
+    "types": [0, 1, 2, 3, 4, 32],
+    "max_star": 9,
+    "gold": [5000000, 10000000, 20000000, 40000000, 60000000, 90000000, 120000000, 200000000, 300000000],
+    "gem": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "rate": [50, 20, 10, 5, 1, 0.7, 0.5, 0.1, 0.1],
+    "cooldown_ms": 500,
+    "max_batch": 100,
+    "slot_option": 107
+  },
+
+  "socket": {
+    "_src": "combine/EpSaoTrangBi.java:80-167, CombineSystem.java:21-135, CombineService.java:483-497",
+    "_note": "Legacy also accepted item ids 14-20 as stones, but in the imported data those are dragon balls, so only type-30 stars and the table below are accepted.",
+    "gem": 10,
+    "stone_type": 30,
+    "stones": {"441": [95, 5], "442": [96, 5], "443": [97, 5], "444": [98, 3], "445": [99, 3], "446": [100, 5], "447": [101, 5]},
+    "star_option": 102,
+    "slot_option": 107,
+    "max_slots": 9,
+    "separate_from_star": 8,
+    "unlock_option": 228,
+    "unlock_from_slot": 8
+  },
+
+  "earring_upgrade": [
+    {"_src": "combine/NangCapBongTai.java:19-147", "from": 454, "to": 921, "level": 2, "fragment": 933,
+     "need": 9999, "fail_cost": 99, "gold": 200000000, "gem": 1000, "rate": 50},
+    {"_src": "combine/NangCapBongTai3.java:18-145", "from": 921, "to": 1819, "level": 3, "fragment": 1820,
+     "need": 20000, "fail_cost": 200, "gold": 200000000, "gem": 1000, "rate": 50}
+  ],
+  "earring_stats": [
+    {"_src": "combine/NangChiSoBongTai.java:15-135", "item": 921, "level": 2, "soul": 934, "need": 200, "stone": 935, "gem": 1000, "rate": 45, "count": 1},
+    {"_src": "combine/NangChiSoBongTai3.java:16-141", "item": 1819, "level": 3, "soul": 934, "need": 99, "stone": 935, "gem": 1000, "rate": 30, "count": 2}
+  ],
+  "earring_options": [77, 80, 81, 103, 50, 94, 5],
+  "earring_param": [5, 15],
+  "fragment_count_option": 31,
+
+  "recipes": [
+    {"id": "nr2", "name": "Nhập 7 viên 2 sao", "_src": "combine/NhapNgocRong.java:35-49", "inputs": [{"ids": [15], "qty": 7}], "outputs": [14], "rate": 100},
+    {"id": "nr3", "name": "Nhập 7 viên 3 sao", "_src": "combine/NhapNgocRong.java:35-49", "inputs": [{"ids": [16], "qty": 7}], "outputs": [15], "rate": 100},
+    {"id": "nr4", "name": "Nhập 7 viên 4 sao", "_src": "combine/NhapNgocRong.java:35-49", "inputs": [{"ids": [17], "qty": 7}], "outputs": [16], "rate": 100},
+    {"id": "nr5", "name": "Nhập 7 viên 5 sao", "_src": "combine/NhapNgocRong.java:35-49", "inputs": [{"ids": [18], "qty": 7}], "outputs": [17], "rate": 100},
+    {"id": "nr6", "name": "Nhập 7 viên 6 sao", "_src": "combine/NhapNgocRong.java:35-49", "inputs": [{"ids": [19], "qty": 7}], "outputs": [18], "rate": 100},
+    {"id": "nr7", "name": "Nhập 7 viên 7 sao", "_src": "combine/NhapNgocRong.java:35-49", "inputs": [{"ids": [20], "qty": 7}], "outputs": [19], "rate": 100},
+    {"id": "nhap_da", "name": "Làm phép nhập đá", "_src": "combine/LamPhepNhapDa.java:19-101", "inputs": [{"ids": [225], "qty": 10}, {"ids": [226], "qty": 1}],
+     "gold": 10000000, "rate": 80, "outputs": [220, 221, 222, 223, 224]},
+    {"id": "hematite", "name": "Tạo đá Hematite", "_src": "combine/TaoDaHematite.java:19-76", "inputs": [{"ids": [441, 442, 443, 444, 445, 446, 447], "qty": 5}],
+     "gold": 50000000, "rate": 100, "outputs": [1423]},
+    {"id": "dui_duc", "name": "Tạo dùi đục", "_src": "combine/CheTaoDuiDuc.java:18-69", "inputs": [{"ids": [1423], "qty": 5}], "gold": 50000000, "rate": 100, "outputs": [1438]},
+    {"id": "da_mai", "name": "Tạo đá mài", "_src": "combine/TaoDaMai.java:19-68", "inputs": [{"ids": [1438], "qty": 5}], "gold": 50000000, "rate": 100, "outputs": [1439]},
+    {"id": "tai_tao", "name": "Tái tạo Capsule kích hoạt", "_src": "combine/TaiTaoCapsuleKichHoat.java:19-118", "inputs": [{"ids": [1656], "qty": 3}, {"ids": [1634], "qty": 1}],
+     "gold": 2000000000, "rate": 100, "outputs": [1655]}
+  ],
+
+  "disassemble": {
+    "_src": "combine/PhanRaTrangBiKichHoat.java:21-115",
+    "gold": 2000000000,
+    "options": [128, 129, 127, 233, 245, 130, 131, 132, 237, 133, 135, 134, 241],
+    "output": 1656
+  },
+
+  "kit": {
+    "_src": "services/ItemService.java:200-328 (OpenSKH/createItemSKH/getOptionIdsBySKH), npc/NpcFactory.java:365-377",
+    "capsule": 1655,
+    "items": [
+      [[0, 3, 33, 34, 136, 137, 138, 139, 230, 231, 232, 233], [6, 9, 35, 36, 140, 141, 142, 143, 242, 243, 244, 245], [21, 24, 37, 38, 144, 145, 146, 147, 254, 256, 257], [27, 30, 39, 40, 148, 149, 150, 151, 266, 267, 268, 269], [12, 57, 58, 59, 184, 185, 186, 187, 278, 279, 280, 281]],
+      [[1, 4, 41, 42, 152, 153, 154, 155, 235, 236, 237], [7, 10, 43, 44, 156, 157, 158, 159, 246, 247, 248, 249], [22, 25, 45, 46, 160, 161, 162, 163, 259, 260, 261], [28, 31, 47, 48, 164, 165, 166, 167, 270, 271, 272, 273], [12, 57, 58, 59, 184, 185, 186, 187, 278, 279, 280, 281]],
+      [[2, 5, 49, 50, 168, 169, 170, 171, 238, 239, 240, 241], [8, 11, 51, 52, 172, 173, 174, 174, 250, 251, 252, 253], [23, 26, 53, 54, 176, 177, 178, 179, 262, 263, 264, 265], [29, 32, 55, 56, 180, 181, 182, 183, 274, 275, 276, 277], [12, 57, 58, 59, 184, 185, 186, 187, 278, 279, 280, 281]]
+    ],
+    "type_names": ["Áo", "Quần", "Găng", "Giày", "Rada"],
+    "sets": [[128, 129, 127, 233, 245], [130, 131, 132, 233, 237], [133, 135, 134, 233, 241]],
+    "subs": {"127": [140], "128": [139], "129": [141], "130": [142], "131": [143], "132": [144], "133": [136], "134": [137], "135": [138],
+             "233": [234], "237": [238, 239, 240], "241": [242, 243, 244], "245": [246, 247, 248]},
+    "no_trade_option": 30,
+    "drop": {
+      "_src": "mob/Mob.java:787-892, services/ItemService.java:703-825 (option-236 bonus and cờ bốn lá not ported)",
+      "maps": [1, 2, 3, 8, 9, 11, 15, 16, 17, 164],
+      "chance": 0.02,
+      "items": [[[0, 33], [1, 41], [2, 49]], [[6, 35], [7, 43], [8, 51]], [[27, 30], [28, 47], [29, 55]], [[21, 24], [22, 46], [23, 53]], [[12, 57], [12, 57], [12, 57]]],
+      "type_weights": [12.27, 15.94, 41.09, 20.7, 10],
+      "set_weights": [
+        [[245, 30], [128, 35], [127, 17.5], [233, 8.75], [129, 8.75]],
+        [[237, 30], [130, 35], [131, 17.5], [233, 8.75], [132, 8.75]],
+        [[241, 30], [134, 35], [135, 17.5], [233, 8.75], [133, 8.75]]
+      ]
+    }
+  },
+
+  "use": {
+    "gold_bar": 457,
+    "_gold_bar_src": "services_func/Input.java:495-518 (1 thỏi vàng = 37.000.000 vàng)",
+    "gold_bar_value": 37000000,
+    "notice": {"987": "Bảo vệ trang bị không bị rớt cấp"},
+    "equip_types": {"11": 8, "23": 9, "24": 9},
+    "_equip_src": "services_func/UseItem.java:280-290 (type 11 bag, 23/24 mounts go to the body)",
+    "boxes": {
+      "380": [
+        {"_src": "services_func/UseItem.java:1491-1518", "items": [189], "min": 5000, "max": 20000, "weight": 4},
+        {"items": [381], "weight": 1, "opts": [{"id": 73, "min": 0, "max": 0}]},
+        {"items": [382], "weight": 1, "opts": [{"id": 73, "min": 0, "max": 0}]},
+        {"items": [383], "weight": 1, "opts": [{"id": 73, "min": 0, "max": 0}]},
+        {"items": [384], "weight": 1, "opts": [{"id": 73, "min": 0, "max": 0}]},
+        {"items": [385], "weight": 1, "opts": [{"id": 73, "min": 0, "max": 0}]}
+      ],
+      "962": [
+        {"_src": "services_func/UseItem.java:2576-2601", "items": [1087, 1088, 1089, 1090, 1091], "weight": 1,
+         "opts": [{"id": 50, "min": 1, "max": 16}, {"id": 77, "min": 1, "max": 17}, {"id": 103, "min": 1, "max": 15}, {"id": 95, "min": 1, "max": 5},
+                  {"id": 96, "min": 1, "max": 5}, {"id": 93, "min": 5, "max": 5, "chance": 98}],
+         "pick": [{"ids": [94, 97, 108], "min": 3, "max": 5}]}
+      ],
+      "963": [
+        {"_src": "services_func/UseItem.java:2603-2628", "items": [1087, 1088, 1089, 1090, 1091], "weight": 1,
+         "opts": [{"id": 50, "min": 1, "max": 16}, {"id": 77, "min": 1, "max": 17}, {"id": 103, "min": 1, "max": 15}, {"id": 95, "min": 1, "max": 5},
+                  {"id": 96, "min": 1, "max": 5}, {"id": 93, "min": 7, "max": 7}],
+         "pick": [{"ids": [94, 97, 108], "min": 3, "max": 5}]}
+      ],
+      "1171": [
+        {"_src": "services_func/UseItem.java:2630-2660", "items": [1158, 1159, 1160, 1161, 1162, 1163, 1164], "weight": 1,
+         "opts": [{"id": 50, "min": 11, "max": 11}, {"id": 77, "min": 13, "max": 13}, {"id": 103, "min": 13, "max": 13},
+                  {"id": 93, "min": 1, "max": 3, "chance": 98, "else": [73, 0]}],
+         "pick": [{"ids": [94, 97, 108], "min": 3, "max": 5}]}
+      ],
+      "1776": [
+        {"_src": "services_func/UseItem.java:2006-2036", "items": [1772, 1773], "weight": 1,
+         "opts": [{"id": 50, "min": 10, "max": 10}, {"id": 77, "min": 10, "max": 10}, {"id": 103, "min": 10, "max": 10}, {"id": 14, "min": 10, "max": 10}, {"id": 93, "min": 3, "max": 3}]}
+      ]
+    }
+  },
+
+  "drops": [
+    {"src": "mob/Mob.java:629-653 isMapUpPorata", "maps": [[156, 159]],
+     "rules": [{"item": 933, "chance": 10, "min": 1}, {"item": 934, "chance": 4.5, "min": 1}, {"item": 935, "chance": 0.18, "min": 1}]},
+    {"src": "mob/Mob.java:656-667 isMap3Planets gold", "maps": [[0, 38]], "except": [0, 7, 14, 21, 22, 23, 24, 25, 26],
+     "rules": [{"item": 189, "chance": 5, "min": 500, "max": 3000}]},
+    {"src": "mob/Mob.java:668-679 isMapNappa gold", "maps": [[63, 83]],
+     "rules": [{"item": 189, "chance": 1, "min": 2000, "max": 6000}]},
+    {"src": "mob/Mob.java:693-718 AllMap 0-163", "maps": [[0, 163]],
+     "rules": [{"item": 1798, "chance": 5, "min": 1}, {"item": 1799, "chance": 5, "min": 1}, {"item": 1800, "chance": 5, "min": 1},
+               {"item": 1612, "chance": 5, "min": 1}, {"item": 1801, "chance": 1, "min": 1}, {"item": 1802, "chance": 0.77, "min": 1}]},
+    {"src": "mob/Mob.java:720-731,1001-1008 isMapCold", "maps": [[105, 110]],
+     "rules": [{"item": 190, "chance": 30, "min": 150000, "max": 250000},
+               {"item": 220, "chance": 4, "min": 1}, {"item": 221, "chance": 4, "min": 1}, {"item": 222, "chance": 4, "min": 1},
+               {"item": 223, "chance": 4, "min": 1}, {"item": 224, "chance": 4, "min": 1}]},
+    {"src": "mob/Mob.java:732-743 isMapTuongLai", "maps": [[92, 94], [96, 100], [102, 103]],
+     "rules": [{"item": 190, "chance": 15, "min": 80000, "max": 150000}]},
+    {"src": "mob/Mob.java:744-758 isMapPhoBan", "maps": [[53, 62], [135, 138], [141, 144], [147, 152]], "except": [150],
+     "rules": [{"item": 190, "chance": 1, "min": 80000, "max": 200000}]},
+    {"src": "mob/Mob.java:759-762 gem 1/1000000", "maps": [[0, 10000]],
+     "rules": [{"item": 77, "chance": 0.0001, "min": 1}]},
+    {"src": "mob/Mob.java:763-774 isMapUpSKH capsule vỡ", "maps": [[1, 3], [8, 9], [11, 11], [15, 17]],
+     "rules": [{"item": 1634, "chance": 0.01, "min": 1}]},
+    {"src": "mob/Mob.java:775-786,1010-1014 isMapDoanhTrai", "maps": [[53, 62]],
+     "rules": [{"item": 1778, "chance": 20, "min": 1}, {"item": 225, "chance": 10, "min": 1}]},
+    {"src": "mob/Mob.java:787-798 isMapRiengTu", "maps": [[164, 164]],
+     "rules": [{"item": 1634, "chance": 0.005, "min": 1}]},
+    {"src": "mob/Mob.java:1016-1020 isMap3Planets đá vụn", "maps": [[0, 38]], "except": [0, 7, 14, 21, 22, 23, 24, 25, 26],
+     "rules": [{"item": 225, "chance": 10, "min": 1}]},
+    {"src": "mob/Mob.java:1022-1033 ngọc rồng 6-7 sao (10/70)", "maps": [[0, 38], [63, 83], [92, 94], [96, 100], [102, 103], [105, 110]], "except": [0, 7, 14, 21, 22, 23, 24, 25, 26],
+     "rules": [{"item": 19, "chance": 7.14, "min": 1}, {"item": 20, "chance": 7.14, "min": 1}]},
+    {"src": "mob/Mob.java:1039-1041 isMapNgucTu", "maps": [[155, 155]],
+     "rules": [{"item": 1229, "chance": 10, "min": 1}]},
+    {"src": "mob/Mob.java:1043-1045 isMapNguHanhSon", "maps": [[122, 124]],
+     "rules": [{"item": 541, "chance": 5, "min": 1}, {"item": 542, "chance": 5, "min": 1}]},
+    {"src": "mob/Mob.java:1047-1056 ngọc rồng 4-7 sao 1%", "maps": [[0, 10000]],
+     "rules": [{"item": 17, "chance": 0.25, "min": 1}, {"item": 18, "chance": 0.25, "min": 1}, {"item": 19, "chance": 0.25, "min": 1}, {"item": 20, "chance": 0.25, "min": 1}]},
+    {"src": "mob/Mob.java:1058-1067 sao pha lê 10%", "maps": [[0, 10000]],
+     "rules": [{"item": 441, "chance": 1.43, "min": 1}, {"item": 442, "chance": 1.43, "min": 1}, {"item": 443, "chance": 1.43, "min": 1},
+               {"item": 444, "chance": 1.43, "min": 1}, {"item": 445, "chance": 1.43, "min": 1}, {"item": 446, "chance": 1.43, "min": 1}, {"item": 447, "chance": 1.43, "min": 1}]}
+  ],
+
+  "lucky": {
+    "_src": "services_func/LuckyRound.java:22-187, npc_list/ThuongDe.java:98-149, services/RewardService.java:37-182 (nested isTrue chain flattened into weights)",
+    "npc": 19,
+    "price_gold": 250000000,
+    "price_gem": 4,
+    "ticket": 821,
+    "box_max": 100,
+    "max_spin": 10,
+    "pool": [
+      {"items": [189], "min": 5000, "max": 50000, "weight": 42},
+      {"items": [189], "min": 5000, "max": 12000, "weight": 31},
+      {"items": [1208], "weight": 2.5, "opts": [{"id": 50, "min": 20, "max": 25}, {"id": 77, "min": 20, "max": 25}, {"id": 103, "min": 20, "max": 25}, {"id": 154, "min": 0, "max": 0}, {"id": 93, "min": 3, "max": 15, "chance": 99}]},
+      {"items": [1209], "weight": 2.4, "opts": [{"id": 50, "min": 20, "max": 25}, {"id": 77, "min": 20, "max": 25}, {"id": 103, "min": 20, "max": 25}, {"id": 154, "min": 0, "max": 0}, {"id": 93, "min": 3, "max": 15, "chance": 99}]},
+      {"items": [1210], "weight": 2.25, "opts": [{"id": 50, "min": 20, "max": 25}, {"id": 77, "min": 20, "max": 25}, {"id": 103, "min": 20, "max": 25}, {"id": 154, "min": 0, "max": 0}, {"id": 93, "min": 3, "max": 15, "chance": 99}]},
+      {"items": [884], "weight": 2.15, "opts": [{"id": 50, "min": 0, "max": 19}, {"id": 77, "min": 0, "max": 19}, {"id": 103, "min": 0, "max": 19}, {"id": 5, "min": 0, "max": 29}, {"id": 154, "min": 0, "max": 0}, {"id": 93, "min": 3, "max": 15, "chance": 99}]},
+      {"items": [860], "weight": 2.0, "opts": [{"id": 50, "min": 0, "max": 23}, {"id": 77, "min": 0, "max": 23}, {"id": 117, "min": 15, "max": 15}, {"id": 154, "min": 0, "max": 0}, {"id": 93, "min": 3, "max": 15, "chance": 99}]},
+      {"items": [955], "weight": 0.4, "opts": [{"id": 50, "min": 1, "max": 10}, {"id": 77, "min": 1, "max": 10}, {"id": 103, "min": 1, "max": 10}, {"id": 93, "min": 3, "max": 15, "chance": 99}]},
+      {"items": [956], "weight": 1.9},
+      {"items": [467, 468, 469, 470, 471, 741, 745, 800, 801, 803, 804, 999, 1000, 1001], "weight": 12.5,
+       "opts": [{"id": 30, "min": 0, "max": 0}, {"id": 93, "min": 1, "max": 30}], "pick": [{"ids": [77, 80, 81, 103, 50, 94, 5], "min": 5, "max": 10}]},
+      {"items": [18, 19, 20], "min": 1, "max": 5, "weight": 0.125},
+      {"items": [220, 221, 222, 223, 224], "min": 1, "max": 5, "weight": 0.41},
+      {"items": [828, 829, 830, 831, 832, 833, 834, 835, 836, 837, 838, 839, 840, 841, 842], "min": 1, "max": 5, "weight": 0.12}
+    ]
+  },
+
+  "consign": {
+    "_src": "shop_ky_gui/ConsignShopService.java:82-439",
+    "npc": 28,
+    "gold_bar": 457,
+    "fee_bars": 1,
+    "uptop_bars": 2,
+    "tax_pct": 10,
+    "max_qty": 99,
+    "max_price_bars": 100000,
+    "max_price_gem": 1000000,
+    "buy_min_power": 17000000000,
+    "page_size": 20,
+    "allowed_types": [6, 14, 15],
+    "allowed_ids": [14, 15, 16, 17, 18, 19, 20],
+    "allowed_options": [86, 87],
+    "forbidden_options": [30],
+    "tab_names": ["Trang bị", "Phụ kiện", "Hỗ trợ", "Linh tinh"]
+  },
+
+  "limit": {
+    "_src": "services/OpenPowerService.java:15-65, item/ItemTime.java:19,207-216, npc_list/QuocVuong.java:14-105, npc_list/ToSuKaio.java:74-115",
+    "basic_seconds": 8640,
+    "speed_gold": 50000000,
+    "max": 9,
+    "npcs": {"42": [0, 5], "43": [5, 9]}
+  }
+}

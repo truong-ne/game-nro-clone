@@ -1,0 +1,1719 @@
+{
+ "_comment": "Arena content (dungeons, bosses, tournaments, minigames). Ported from SRC/src/nro/models; see src fields.",
+ "rewards": {
+  "gold": [
+   {
+    "item": 190,
+    "min": 20000,
+    "max": 30000,
+    "chance": 100
+   },
+   {
+    "item": 18,
+    "min": 1,
+    "max": 1,
+    "chance": 27
+   },
+   {
+    "item": 19,
+    "min": 1,
+    "max": 1,
+    "chance": 27
+   },
+   {
+    "item": 20,
+    "min": 1,
+    "max": 1,
+    "chance": 26
+   }
+  ],
+  "rare": [
+   {
+    "item": 190,
+    "min": 50000,
+    "max": 100000,
+    "chance": 100
+   },
+   {
+    "item": 16,
+    "min": 1,
+    "max": 1,
+    "chance": 30
+   },
+   {
+    "item": 17,
+    "min": 1,
+    "max": 1,
+    "chance": 30
+   },
+   {
+    "item": 457,
+    "min": 1,
+    "max": 3,
+    "chance": 50
+   }
+  ]
+ },
+ "world_bosses": [
+  {
+   "id": "arena_tieu_doi_truong",
+   "src": "boss/tieu_doi_sat_thu/TDT.java",
+   "mob": 53,
+   "maps": [
+    79,
+    81,
+    82,
+    83
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Tiểu đội trưởng",
+     "hp": 50000000,
+     "dmg": 13000,
+     "src": "BossesData.java:198",
+     "chat_start": "Oải rồi hả",
+     "chat_die": "Fide gọi ta về, ngươi có ngon thì chờ ở đây"
+    }
+   ]
+  },
+  {
+   "id": "arena_so_1",
+   "src": "boss/tieu_doi_sat_thu/SO1.java",
+   "mob": 51,
+   "maps": [
+    79,
+    81,
+    82,
+    83
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Số 1",
+     "hp": 40000000,
+     "dmg": 12500,
+     "src": "BossesData.java:174",
+     "chat_start": "Oải rồi hả",
+     "chat_die": "Fide gọi ta về, ngươi có ngon thì chờ ở đây"
+    }
+   ]
+  },
+  {
+   "id": "arena_so_2",
+   "src": "boss/tieu_doi_sat_thu/SO2.java",
+   "mob": 52,
+   "maps": [
+    79,
+    81,
+    82,
+    83
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Số 2",
+     "hp": 30500000,
+     "dmg": 12000,
+     "src": "BossesData.java:150",
+     "chat_start": "Oải rồi hả",
+     "chat_die": "Fide gọi ta về, ngươi có ngon thì chờ ở đây"
+    }
+   ]
+  },
+  {
+   "id": "arena_so_3",
+   "src": "boss/tieu_doi_sat_thu/SO3.java",
+   "mob": 51,
+   "maps": [
+    79,
+    81,
+    82,
+    83
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Số 3",
+     "hp": 30000000,
+     "dmg": 11000,
+     "src": "BossesData.java:125",
+     "chat_start": "Oải rồi hả",
+     "chat_die": "Fide gọi ta về, ngươi có ngon thì chờ ở đây"
+    }
+   ]
+  },
+  {
+   "id": "arena_so_4",
+   "src": "boss/tieu_doi_sat_thu/SO4.java",
+   "mob": 52,
+   "maps": [
+    79,
+    81,
+    82,
+    83
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Số 4",
+     "hp": 25000000,
+     "dmg": 10000,
+     "src": "BossesData.java:99",
+     "chat_start": "Oải rồi hả",
+     "chat_die": "Fide gọi ta về, ngươi có ngon thì chờ ở đây"
+    }
+   ]
+  },
+  {
+   "id": "arena_tieu_doi_truong_nm",
+   "src": "boss/tieu_doi_sat_thu_namek/TDT_NM.java",
+   "mob": 53,
+   "maps": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    25,
+    34,
+    33,
+    43
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Tiểu đội trưởng Namek",
+     "hp": 5000000,
+     "dmg": 15000,
+     "src": "BossesData.java:316",
+     "chat_start": "Oải rồi hả?",
+     "chat_die": "Cay quá!"
+    }
+   ]
+  },
+  {
+   "id": "arena_so_1_nm",
+   "src": "boss/tieu_doi_sat_thu_namek/SO1_NM.java",
+   "mob": 51,
+   "maps": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    25,
+    34,
+    33,
+    43
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Số 1 Namek",
+     "hp": 4000000,
+     "dmg": 13200,
+     "src": "BossesData.java:293",
+     "chat_start": "Oải rồi hả?",
+     "chat_die": "Cay quá!"
+    }
+   ]
+  },
+  {
+   "id": "arena_so_2_nm",
+   "src": "boss/tieu_doi_sat_thu_namek/SO2_NM.java",
+   "mob": 52,
+   "maps": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    25,
+    34,
+    33,
+    43
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Số 2 Namek",
+     "hp": 3500000,
+     "dmg": 12200,
+     "src": "BossesData.java:270",
+     "chat_start": "Oải rồi hả?",
+     "chat_die": "Cay quá!"
+    }
+   ]
+  },
+  {
+   "id": "arena_so_3_nm",
+   "src": "boss/tieu_doi_sat_thu_namek/SO3_NM.java",
+   "mob": 51,
+   "maps": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    25,
+    34,
+    33,
+    43
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Số 3 Namek",
+     "hp": 3000000,
+     "dmg": 10000,
+     "src": "BossesData.java:247",
+     "chat_start": "Oải rồi hả?",
+     "chat_die": "Cay quá!"
+    }
+   ]
+  },
+  {
+   "id": "arena_so_4_nm",
+   "src": "boss/tieu_doi_sat_thu_namek/SO4_NM.java",
+   "mob": 52,
+   "maps": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    25,
+    34,
+    33,
+    43
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Số 4 Namek",
+     "hp": 2500000,
+     "dmg": 10000,
+     "src": "BossesData.java:222",
+     "chat_start": "Oải rồi hả?",
+     "chat_die": "Cay quá!"
+    }
+   ]
+  },
+  {
+   "id": "arena_bojack",
+   "src": "boss/trai_dat/BOJACK.java",
+   "mob": 66,
+   "maps": [
+    3,
+    4,
+    5,
+    6,
+    27,
+    28,
+    29,
+    30
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "rare",
+   "stages": [
+    {
+     "name": "Bojack",
+     "hp": 100000000,
+     "dmg": 300000,
+     "src": "BossesData.java:1581",
+     "chat_start": "Hahaha",
+     "chat_die": "Hahaha"
+    },
+    {
+     "name": "Siêu Bojack",
+     "hp": 150000000,
+     "dmg": 300000,
+     "src": "BossesData.java:1602",
+     "chat_start": "Hahaha",
+     "chat_die": "Hahaha"
+    }
+   ]
+  },
+  {
+   "id": "arena_bujin",
+   "src": "boss/trai_dat/BUJIN.java",
+   "mob": 67,
+   "maps": [
+    3,
+    4,
+    5,
+    6,
+    27,
+    28,
+    29,
+    30
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Bujin",
+     "hp": 20000000,
+     "dmg": 170000,
+     "src": "BossesData.java:1496",
+     "chat_start": "Oải rồi hả?",
+     "chat_die": "Cay quá!"
+    }
+   ]
+  },
+  {
+   "id": "arena_kogu",
+   "src": "boss/trai_dat/KOGU.java",
+   "mob": 68,
+   "maps": [
+    3,
+    4,
+    5,
+    6,
+    27,
+    28,
+    29,
+    30
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Kogu",
+     "hp": 40000000,
+     "dmg": 180000,
+     "src": "BossesData.java:1519",
+     "chat_start": "Trói",
+     "chat_die": "Cứu"
+    }
+   ]
+  },
+  {
+   "id": "arena_zangya",
+   "src": "boss/trai_dat/ZANGYA.java",
+   "mob": 69,
+   "maps": [
+    3,
+    4,
+    5,
+    6,
+    27,
+    28,
+    29,
+    30
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Zangya",
+     "hp": 60000000,
+     "dmg": 207200,
+     "src": "BossesData.java:1539",
+     "chat_start": "Trói",
+     "chat_die": "Cứu"
+    }
+   ]
+  },
+  {
+   "id": "arena_bido",
+   "src": "boss/trai_dat/BIDO.java",
+   "mob": 66,
+   "maps": [
+    3,
+    4,
+    5,
+    6,
+    27,
+    28,
+    29,
+    30
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Bido",
+     "hp": 80000000,
+     "dmg": 250200,
+     "src": "BossesData.java:1559",
+     "chat_start": "Oải rồi hả?",
+     "chat_die": "Cay quá!"
+    }
+   ]
+  },
+  {
+   "id": "arena_super_bojack",
+   "src": "boss/trai_dat/SUPER_BOJACK.java",
+   "mob": 66,
+   "maps": [
+    3,
+    4,
+    5,
+    6,
+    27,
+    28,
+    29,
+    30
+   ],
+   "respawn_s": 1800,
+   "rest_s": 60,
+   "rewards": "rare",
+   "stages": [
+    {
+     "name": "Siêu Bojack",
+     "hp": 500000000,
+     "dmg": 300000,
+     "src": "BossesData.java:1623",
+     "chat_start": "Hahaha",
+     "chat_die": "Hahaha"
+    }
+   ]
+  },
+  {
+   "id": "arena_king_kong",
+   "src": "boss/Android/KingKong.java",
+   "mob": 55,
+   "maps": [
+    97,
+    98,
+    99
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "King Kong",
+     "hp": 20000000,
+     "dmg": 12000,
+     "src": "BossesData.java:592",
+     "chat_start": "Mau đền mạng cho những người bạn của ta",
+     "chat_die": ""
+    }
+   ]
+  },
+  {
+   "id": "arena_pic",
+   "src": "boss/Android/Pic.java",
+   "mob": 72,
+   "maps": [
+    97,
+    98,
+    99
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Pic",
+     "hp": 10000000,
+     "dmg": 17022,
+     "src": "BossesData.java:535",
+     "chat_start": "Ngươi thực sự rất mạnh dù không phải là một rôbốt. Ngươi không phải là Piccôlô",
+     "chat_die": "Pic tiêu rồi, tớ lên trước nhé!"
+    }
+   ]
+  },
+  {
+   "id": "arena_poc",
+   "src": "boss/Android/Poc.java",
+   "mob": 72,
+   "maps": [
+    97,
+    98,
+    99
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Poc",
+     "hp": 15000000,
+     "dmg": 18000,
+     "src": "BossesData.java:570",
+     "chat_start": "Đừng tưởng ta đây là con gái mà dễ bắt nạt nhé",
+     "chat_die": "Cô gái xinh đẹp vậy mà lại bị tên tiến sĩ Kôrê biến thành người máy.."
+    }
+   ]
+  },
+  {
+   "id": "arena_xen_bo_hung",
+   "src": "boss/Cell/XenBoHung.java",
+   "mob": 65,
+   "maps": [
+    100
+   ],
+   "respawn_s": 1800,
+   "rest_s": 60,
+   "rewards": "rare",
+   "stages": [
+    {
+     "name": "Xên bọ hung",
+     "hp": 50000000,
+     "dmg": 20000,
+     "src": "BossesData.java:614",
+     "chat_start": "Hắn làm ta bất ngờ đấy! Khốn kiếp!",
+     "chat_die": "Khốn kiếp, Pic.. hắn bị Cell hấp thu rồi!!"
+    },
+    {
+     "name": "Xên hoàn thiện",
+     "hp": 100000000,
+     "dmg": 25000,
+     "src": "BossesData.java:653",
+     "chat_start": "Nguy rồi... thực sự nguy to rồi!",
+     "chat_die": "Đến lúc rồi!"
+    },
+    {
+     "name": "Xên hoàn thiện",
+     "hp": 150000000,
+     "dmg": 30000,
+     "src": "BossesData.java:680",
+     "chat_start": "Cell đã đạt đến dạng hoàn hảo rồi!",
+     "chat_die": "Oái.. không..."
+    }
+   ]
+  },
+  {
+   "id": "arena_sieu_bo_hung",
+   "src": "boss/Cell/SieuBoHung.java",
+   "mob": 65,
+   "maps": [
+    103
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "rare",
+   "stages": [
+    {
+     "name": "Xên Hoàn Thiện",
+     "hp": 150000000,
+     "dmg": 35000,
+     "src": "BossesData.java:716",
+     "chat_start": "",
+     "chat_die": ""
+    },
+    {
+     "name": "Siêu Bọ Hung",
+     "hp": 200000000,
+     "dmg": 40000,
+     "src": "BossesData.java:736",
+     "chat_start": "",
+     "chat_die": ""
+    }
+   ]
+  },
+  {
+   "id": "arena_kuku",
+   "src": "boss/Nappa/Kuku.java",
+   "mob": 39,
+   "maps": [
+    68,
+    69,
+    70,
+    71,
+    72
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Kuku",
+     "hp": 500000,
+     "dmg": 9000,
+     "src": "BossesData.java:34",
+     "chat_start": "Ta sẽ tàn sát khu này trong vòng 5 phút nữa",
+     "chat_die": ""
+    }
+   ]
+  },
+  {
+   "id": "arena_map_dau_dinh",
+   "src": "boss/Nappa/MapDauDinh.java",
+   "mob": 39,
+   "maps": [
+    63,
+    64,
+    65,
+    66,
+    67
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Mập Đầu Đinh",
+     "hp": 1000000,
+     "dmg": 10000,
+     "src": "BossesData.java:56",
+     "chat_start": "HAHAHA",
+     "chat_die": ""
+    }
+   ]
+  },
+  {
+   "id": "arena_rambo",
+   "src": "boss/Nappa/Rambo.java",
+   "mob": 39,
+   "maps": [
+    74,
+    75,
+    76,
+    77
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Rambo",
+     "hp": 1500000,
+     "dmg": 12400,
+     "src": "BossesData.java:77",
+     "chat_start": "HAHAHA",
+     "chat_die": "Ôi bạn ơi..."
+    }
+   ]
+  },
+  {
+   "id": "arena_fide",
+   "src": "boss/Frieza/Fide.java",
+   "mob": 53,
+   "maps": [
+    80
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "rare",
+   "stages": [
+    {
+     "name": "Fide đại ca 1",
+     "hp": 10000000,
+     "dmg": 22000,
+     "src": "BossesData.java:340",
+     "chat_start": "Các ngươi tới số rồi mới gặp phải ta",
+     "chat_die": "Ác quỷ biến hình, hây aaaa..."
+    },
+    {
+     "name": "Fide đại ca 2",
+     "hp": 20000000,
+     "dmg": 25000,
+     "src": "BossesData.java:362",
+     "chat_start": "Oải rồi hả?",
+     "chat_die": "Ác quỷ biến hình, Graaaaa...."
+    },
+    {
+     "name": "Fide đại ca 3",
+     "hp": 30000000,
+     "dmg": 30000,
+     "src": "BossesData.java:390",
+     "chat_start": "Ta nói các ngươi rồi! Sức mạnh này của ta còn đáng sợ hơn địa ngục!!",
+     "chat_die": "Lũ khốn.."
+    }
+   ]
+  },
+  {
+   "id": "arena_android_14",
+   "src": "boss/Android/Android14.java",
+   "mob": 72,
+   "maps": [
+    104
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Android 14",
+     "hp": 4000000,
+     "dmg": 12000,
+     "src": "BossesData.java:498",
+     "chat_start": "Các ngươi là ai?",
+     "chat_die": "Số 14 và số 15 tiêu tùng cả rồi à?"
+    }
+   ]
+  },
+  {
+   "id": "arena_android_13",
+   "src": "boss/Android/Android13.java",
+   "mob": 72,
+   "maps": [
+    104
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Android 13",
+     "hp": 3000000,
+     "dmg": 12055,
+     "src": "BossesData.java:469",
+     "chat_start": "Sao thế hả? Ta mới chỉ khởi động thôi mà!",
+     "chat_die": "Sô..Sông...gôku....."
+    }
+   ]
+  },
+  {
+   "id": "arena_android_15",
+   "src": "boss/Android/Android15.java",
+   "mob": 72,
+   "maps": [
+    104
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Android 15",
+     "hp": 5000000,
+     "dmg": 12200,
+     "src": "BossesData.java:518",
+     "chat_start": "",
+     "chat_die": "Thì ra vẫn chỉ là một đống sắt vụn!"
+    }
+   ]
+  },
+  {
+   "id": "arena_dr_kore",
+   "src": "boss/Android/DrKore.java",
+   "mob": 72,
+   "maps": [
+    96,
+    94,
+    93
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Dr.Kôrê",
+     "hp": 2000000,
+     "dmg": 12000,
+     "src": "BossesData.java:415",
+     "chat_start": "Oải rồi hả?",
+     "chat_die": ""
+    }
+   ]
+  },
+  {
+   "id": "arena_android_19",
+   "src": "boss/Android/Android19.java",
+   "mob": 72,
+   "maps": [
+    96,
+    94,
+    93
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Android 19",
+     "hp": 1000000,
+     "dmg": 12200,
+     "src": "BossesData.java:448",
+     "chat_start": "Oải rồi hả?",
+     "chat_die": ""
+    }
+   ]
+  },
+  {
+   "id": "arena_cumber",
+   "src": "boss/cumber/Cumber.java",
+   "mob": 96,
+   "maps": [
+    155
+   ],
+   "respawn_s": 300,
+   "rest_s": 60,
+   "rewards": "rare",
+   "stages": [
+    {
+     "name": "Cumber",
+     "hp": 500000000,
+     "dmg": 50000,
+     "src": "BossesData.java:933",
+     "chat_start": "Các ngươi chỉ có vậy thôi sao?",
+     "chat_die": "Biến hình! Super Saiyan SSJ"
+    },
+    {
+     "name": "Super Cumber",
+     "hp": 2000000000,
+     "dmg": 100000,
+     "src": "BossesData.java:963",
+     "chat_start": "Ta chính là người mang thân thể của Songoku",
+     "chat_die": "Chúng ta sẽ gặp lại nhau sớm thôi"
+    }
+   ]
+  },
+  {
+   "id": "arena_cooler",
+   "src": "boss/Cold/Cooler.java",
+   "mob": 53,
+   "maps": [
+    110
+   ],
+   "respawn_s": 1800,
+   "rest_s": 60,
+   "rewards": "rare",
+   "stages": [
+    {
+     "name": "Cooler",
+     "hp": 200000000,
+     "dmg": 32000,
+     "src": "BossesData.java:2222",
+     "chat_start": "Tụi mày có giỏi thì xông vào cứu hắn đi",
+     "chat_die": "Nãy giờ ta chưa thèm tung hết sức đâu"
+    },
+    {
+     "name": "Cooler 2",
+     "hp": 500000000,
+     "dmg": 50000,
+     "src": "BossesData.java:2250",
+     "chat_start": "Tụi mày có giỏi thì xông vào cứu hắn đi",
+     "chat_die": "Mọi chuyện chưa kết thúc đâu"
+    }
+   ]
+  },
+  {
+   "id": "arena_black_goku",
+   "src": "boss/Black_Goku/BlackGoku.java",
+   "mob": 94,
+   "maps": [
+    102,
+    92,
+    93,
+    94,
+    96,
+    97,
+    98,
+    99,
+    100
+   ],
+   "respawn_s": 300,
+   "rest_s": 60,
+   "rewards": "rare",
+   "stages": [
+    {
+     "name": "Black Goku",
+     "hp": 500000000,
+     "dmg": 50000,
+     "src": "BossesData.java:875",
+     "chat_start": "Các ngươi chỉ có vậy thôi sao?",
+     "chat_die": "Biến hình! Super Saiyan Rose"
+    },
+    {
+     "name": "Super Black Goku",
+     "hp": 2000000000,
+     "dmg": 100000,
+     "src": "BossesData.java:905",
+     "chat_start": "Ta chính là người mang thân thể của Songoku",
+     "chat_die": "Chúng ta sẽ gặp lại nhau sớm thôi"
+    }
+   ]
+  },
+  {
+   "id": "arena_golden_frieza",
+   "src": "boss/Golden_fireza/GoldenFrieza.java",
+   "mob": 53,
+   "maps": [
+    6
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "rare",
+   "stages": [
+    {
+     "name": "Fide Vàng",
+     "hp": 1000000000,
+     "dmg": 100000,
+     "src": "BossesData.java:2496",
+     "chat_start": "He he he",
+     "chat_die": ""
+    }
+   ]
+  },
+  {
+   "id": "arena_soi_hec_quyn",
+   "src": "boss/Boss_mini/SoiHecQuyn.java",
+   "mob": 36,
+   "maps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    92,
+    93,
+    94,
+    96,
+    97,
+    98,
+    99,
+    100,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Sói hẹc quyn",
+     "hp": 10000,
+     "dmg": 1000,
+     "src": "BossesData.java:1260",
+     "chat_start": "",
+     "chat_die": ""
+    }
+   ]
+  },
+  {
+   "id": "arena_an_trom",
+   "src": "boss/Boss_mini/AnTrom.java",
+   "mob": 31,
+   "maps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    92,
+    93,
+    94,
+    96,
+    97,
+    98,
+    99,
+    100,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110
+   ],
+   "respawn_s": 60,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Ăn trộm",
+     "hp": 100,
+     "dmg": 1,
+     "src": "BossesData.java:2546",
+     "chat_start": "",
+     "chat_die": ""
+    }
+   ]
+  },
+  {
+   "id": "arena_o_do",
+   "src": "boss/Boss_mini/Odo.java",
+   "mob": 24,
+   "maps": [
+    168
+   ],
+   "respawn_s": 5,
+   "rest_s": 60,
+   "rewards": "gold",
+   "stages": [
+    {
+     "name": "Ở dơ",
+     "hp": 25000,
+     "dmg": 3000,
+     "src": "BossesData.java:1277",
+     "chat_start": "",
+     "chat_die": ""
+    }
+   ]
+  },
+  {
+   "id": "arena_baby",
+   "src": "boss/Baby/Baby.java",
+   "mob": 53,
+   "maps": [
+    14
+   ],
+   "respawn_s": 900,
+   "rest_s": 60,
+   "rewards": "rare",
+   "stages": [
+    {
+     "name": "Baby",
+     "hp": 2000000000,
+     "dmg": 200000,
+     "src": "BossesData.java:2599",
+     "chat_start": "Hắn làm ta bất ngờ đấy! Khốn kiếp!",
+     "chat_die": "Khốn kiếp, vegeta.. hắn bị baby kí sinh rồi!!"
+    },
+    {
+     "name": "Baby",
+     "hp": 2000000000,
+     "dmg": 250000,
+     "src": "BossesData.java:2640",
+     "chat_start": "Nguy rồi... thực sự nguy to rồi!",
+     "chat_die": "Đến lúc rồi!"
+    },
+    {
+     "name": "Baby",
+     "hp": 2000000000,
+     "dmg": 30000,
+     "src": "BossesData.java:2672",
+     "chat_start": "Baby đã đạt đến dạng hoàn hảo rồi!",
+     "chat_die": "Oái.. không..."
+    }
+   ]
+  },
+  {
+   "id": "arena_janemba",
+   "src": "boss/BossesData.java CADIC_M",
+   "mob": 95,
+   "maps": [
+    165
+   ],
+   "respawn_s": 600,
+   "rest_s": 60,
+   "rewards": "rare",
+   "stages": [
+    {
+     "name": "Cadic M",
+     "hp": 6000000,
+     "dmg": 10000,
+     "src": "BossesData.java:2576",
+     "chat_start": "Khí công pháo",
+     "chat_die": ""
+    }
+   ]
+  }
+ ],
+ "mabu14h": {
+  "src": "map/phoban/MajinBuu14H.java, utils/TimeUtil.java:205",
+  "npc": 44,
+  "hour_open": 14,
+  "hour_close": 15,
+  "gate_map": 127,
+  "boss_map": 128,
+  "max_per_zone": 5,
+  "boss": {
+   "id": "arena_mabu_14h",
+   "src": "boss/MajinBuu_14h/Mabu2H.java",
+   "mob": 95,
+   "respawn_s": 600,
+   "rewards": "rare",
+   "stages": [
+    {
+     "name": "Mabư mập",
+     "hp": 50000000,
+     "dmg": 500000,
+     "src": "BossesData.java:990",
+     "chat_start": "Khí công pháo",
+     "chat_die": "Biến hình"
+    },
+    {
+     "name": "Super Bư",
+     "hp": 60000000,
+     "dmg": 500000,
+     "src": "BossesData.java:1007",
+     "chat_start": "Khí công pháo",
+     "chat_die": "Biến hình"
+    },
+    {
+     "name": "Bư Tênk",
+     "hp": 80000000,
+     "dmg": 500000,
+     "src": "BossesData.java:1023",
+     "chat_start": "Khí công pháo",
+     "chat_die": "Biến hình"
+    },
+    {
+     "name": "Bư Han",
+     "hp": 100000000,
+     "dmg": 500000,
+     "src": "BossesData.java:1040",
+     "chat_start": "Khí công pháo",
+     "chat_die": "Biến hình"
+    },
+    {
+     "name": "Kid Bư",
+     "hp": 150000000,
+     "dmg": 500000,
+     "src": "BossesData.java:1056",
+     "chat_start": "Khí công pháo",
+     "chat_die": "Biến hình"
+    }
+   ]
+  }
+ },
+ "dungeons": {
+  "arena_treasure": {
+   "name": "Bản Đồ Kho Báu",
+   "src": "map/phoban/BanDoKhoBau.java, services_dungeon/TreasureUnderSeaService.java",
+   "npc": 13,
+   "maps": [
+    135,
+    136,
+    137,
+    138
+   ],
+   "minutes": 30,
+   "clan_only": true,
+   "min_power": 2000000000,
+   "item": 611,
+   "min_level": 1,
+   "max_level": 110,
+   "player_daily": 3,
+   "mob_hp_k": 15539950,
+   "mob_hp_k_maps": {
+    "135": 469799,
+    "136": 469799,
+    "137": 469799
+   },
+   "bosses": [
+    {
+     "map": 137,
+     "name": "Trung úy Xanh Lơ",
+     "mob": 38,
+     "hp_lv": 20000000,
+     "dmg_lv": 200000,
+     "count": 1,
+     "win": true,
+     "src": "map/phoban/BanDoKhoBau.java:194-208"
+    }
+   ],
+   "win_when": "bosses",
+   "kick_after_win_s": 60,
+   "home_map": 5
+  },
+  "arena_snake_way": {
+   "name": "Con Đường Rắn Độc",
+   "src": "map/phoban/SnakeWay.java, services_dungeon/SnakeWayService.java",
+   "npc": 20,
+   "maps": [
+    143,
+    142,
+    141,
+    144
+   ],
+   "minutes": 30,
+   "clan_only": true,
+   "min_power": 2000000000,
+   "min_level": 1,
+   "max_level": 110,
+   "player_weekly": 1,
+   "mob_hp_k": 100,
+   "elite_index": 5,
+   "elite_k": 12000,
+   "bosses": [
+    {
+     "map": 144,
+     "name": "Saibamen",
+     "mob": 43,
+     "hp_lv": 2000000,
+     "dmg_lv": 200000,
+     "count": 6,
+     "src": "map/phoban/SnakeWay.java:164-178"
+    },
+    {
+     "map": 144,
+     "name": "Nadic",
+     "mob": 41,
+     "hp_lv": 10000000,
+     "dmg_lv": 1000000,
+     "count": 1,
+     "src": "map/phoban/SnakeWay.java:179-186"
+    },
+    {
+     "map": 144,
+     "name": "Cadich",
+     "mob": 42,
+     "hp_lv": 100000000,
+     "dmg_lv": 10000000,
+     "count": 1,
+     "win": true,
+     "src": "map/phoban/SnakeWay.java:187-194"
+    }
+   ],
+   "win_when": "bosses",
+   "kick_after_win_s": 60,
+   "home_map": 5
+  },
+  "arena_destron_gas": {
+   "name": "Khí Gas Hủy Diệt",
+   "src": "map/phoban/DestronGas.java, services_dungeon/DestronGasService.java",
+   "npc": 67,
+   "maps": [
+    147,
+    148,
+    149,
+    151,
+    152
+   ],
+   "minutes": 30,
+   "clan_only": true,
+   "leader_only": true,
+   "min_power": 2000000000,
+   "min_level": 1,
+   "max_level": 110,
+   "clan_daily": 3,
+   "mob_hp_k": 225,
+   "elite_index": 0,
+   "elite_k": 201000,
+   "bosses": [
+    {
+     "map": 148,
+     "name": "Dr. Lychee",
+     "mob": 47,
+     "hp_lv": 15000000,
+     "dmg_lv": 1000,
+     "count": 1,
+     "after_clear": true,
+     "src": "map/phoban/DestronGas.java:81-95",
+     "then": {
+      "name": "Hatchiyack",
+      "mob": 76,
+      "mult_pct": 150,
+      "win": true,
+      "src": "boss/khi_gas/DrLychee.java:136-147"
+     }
+    }
+   ],
+   "win_when": "bosses",
+   "kick_after_win_s": 60,
+   "home_map": 0
+  },
+  "arena_red_ribbon": {
+   "name": "Doanh Trại Độc Nhãn",
+   "src": "map/phoban/RedRibbonHQ.java, services_dungeon/RedRibbonHQService.java",
+   "npc": 25,
+   "maps": [
+    53,
+    58,
+    59,
+    60,
+    61,
+    62,
+    55,
+    56,
+    54,
+    57
+   ],
+   "minutes": 30,
+   "clan_only": true,
+   "clan_daily": 1,
+   "scale_by_clan": true,
+   "pick_minutes": 5,
+   "bosses": [
+    {
+     "map": 59,
+     "name": "Trung úy Trắng",
+     "mob": 34,
+     "mult_pct": 100,
+     "count": 1,
+     "src": "map/phoban/RedRibbonHQ.java:143-153"
+    },
+    {
+     "map": 62,
+     "name": "Trung úy Xanh Lơ",
+     "mob": 38,
+     "mult_pct": 110,
+     "count": 1,
+     "src": "map/phoban/RedRibbonHQ.java:155-165"
+    },
+    {
+     "map": 55,
+     "name": "Trung úy Thép",
+     "mob": 38,
+     "mult_pct": 115,
+     "count": 1,
+     "src": "map/phoban/RedRibbonHQ.java:167-177"
+    },
+    {
+     "map": 54,
+     "name": "Ninja Áo Tím",
+     "mob": 35,
+     "mult_pct": 120,
+     "count": 1,
+     "src": "map/phoban/RedRibbonHQ.java:179-191"
+    },
+    {
+     "map": 57,
+     "name": "Robot Vệ Sĩ",
+     "mob": 37,
+     "mult_pct": 130,
+     "count": 4,
+     "src": "map/phoban/RedRibbonHQ.java:193-205"
+    }
+   ],
+   "win_when": "all",
+   "home_map": -1
+  }
+ },
+ "black_ball_war": {
+  "src": "map/phoban/BlackBallWar.java, services_dungeon/BlackBallWarService.java, player/RewardBlackBall.java",
+  "npc": 29,
+  "maps": [
+   85,
+   86,
+   87,
+   88,
+   89,
+   90,
+   91
+  ],
+  "first_ball": 372,
+  "hour_open": 20,
+  "pick_minute": 30,
+  "hour_close": 21,
+  "hold_s": 300,
+  "reward_hours": 22,
+  "repick_delay_s": 5,
+  "buffs": [
+   {
+    "star": 1,
+    "dmg_pct": 21
+   },
+   {
+    "star": 2,
+    "hp_pct": 35
+   },
+   {
+    "star": 3,
+    "leech_hp": 35
+   },
+   {
+    "star": 4,
+    "reflect": 35
+   },
+   {
+    "star": 5,
+    "dmg_pct": 35
+   },
+   {
+    "star": 6,
+    "mp_pct": 40
+   },
+   {
+    "star": 7,
+    "dodge": 14
+   }
+  ]
+ },
+ "tournament": {
+  "src": "matches/giai_dau/WorldMartialArtsTournamentManager.java, matches/dai_hoi_vo_thuat/*, consts/ConstTournament.java",
+  "npc": 23,
+  "lobby_map": 52,
+  "arena_map": 51,
+  "reg_until_minute": 25,
+  "start_minute": 30,
+  "end_minute": 57,
+  "match_s": 180,
+  "round_gap_s": 30,
+  "cups": [
+   {
+    "name": "Nhi đồng",
+    "hours": [
+     8,
+     14,
+     18
+    ],
+    "gem": 2,
+    "gold": 0,
+    "min_power": 0,
+    "max_power": 1500000
+   },
+   {
+    "name": "Siêu cấp 1",
+    "hours": [
+     9,
+     13,
+     19
+    ],
+    "gem": 4,
+    "gold": 0,
+    "min_power": 1500000,
+    "max_power": 15000000
+   },
+   {
+    "name": "Siêu cấp 2",
+    "hours": [
+     10,
+     15,
+     20
+    ],
+    "gem": 6,
+    "gold": 0,
+    "min_power": 15000000,
+    "max_power": 150000000
+   },
+   {
+    "name": "Siêu cấp 3",
+    "hours": [
+     11,
+     16,
+     21
+    ],
+    "gem": 8,
+    "gold": 0,
+    "min_power": 150000000,
+    "max_power": 1500000000
+   },
+   {
+    "name": "Ngoại hạng",
+    "hours": [
+     12,
+     17,
+     22,
+     23
+    ],
+    "gem": 0,
+    "gold": 10000,
+    "min_power": 0,
+    "max_power": 0
+   }
+  ],
+  "champion_gems": 50,
+  "champion_items": [
+   220,
+   221,
+   222,
+   223,
+   224
+  ],
+  "win_gold_min": 10000,
+  "win_gold_max": 1000000
+ },
+ "super_rank": {
+  "src": "matches/dai_hoi_vo_thuat/SuperRank*.java, consts/ConstSuperRank.java",
+  "npc": 22,
+  "map": 113,
+  "match_s": 180,
+  "free_tickets": 3,
+  "gem_cost": 1,
+  "rival_mob": 94,
+  "daily_gems": [
+   {
+    "max_rank": 1,
+    "gems": 100
+   },
+   {
+    "max_rank": 10,
+    "gems": 20
+   },
+   {
+    "max_rank": 100,
+    "gems": 5
+   },
+   {
+    "max_rank": 1000,
+    "gems": 1
+   }
+  ]
+ },
+ "minigames": {
+  "lucky": [
+   {
+    "id": "gold",
+    "name": "Con số may mắn (thỏi vàng)",
+    "src": "minigame/ConSoMayManGold.java",
+    "item": 457,
+    "cost": 1,
+    "reward": 90
+   },
+   {
+    "id": "gem",
+    "name": "Con số may mắn (ngọc)",
+    "src": "minigame/ConSoMayManGem.java",
+    "item": 0,
+    "cost": 5,
+    "reward": 450
+   }
+  ],
+  "lucky_bet_s": 50,
+  "lucky_wait_s": 10,
+  "lucky_max_numbers": 10,
+  "lucky_max": 99,
+  "choose": [
+   {
+    "id": "gold",
+    "name": "Chọn ai đây (vàng)",
+    "src": "minigame/ChonAiDay_Gold.java",
+    "gem": false,
+    "normal": 1000000,
+    "vip": 10000000,
+    "normal_pct": 80,
+    "vip_pct": 90
+   },
+   {
+    "id": "gem",
+    "name": "Chọn ai đây (ngọc)",
+    "src": "minigame/ChonAiDay_Gem.java",
+    "gem": true,
+    "normal": 10,
+    "vip": 100,
+    "normal_pct": 80,
+    "vip_pct": 90
+   }
+  ],
+  "choose_round_s": 300,
+  "choose_top": 5,
+  "npc": 54
+ },
+ "top_refresh_s": 300
+}

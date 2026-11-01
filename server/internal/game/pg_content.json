@@ -1,0 +1,111 @@
+{
+  "_comment": "Pets, fusion, set bonuses, extra crafts, stamina, enemies and bag expansion (pg_*.go). Every number cites its legacy source in the Go code next to where it is used.",
+
+  "fusion": {
+    "_src": "player/Fusion.java:15, player/Pet.java:56,153-267, player/Player.java:639-649,824-984, consts/ConstPlayer.java:18-23, services_func/UseItem.java:808-816,1781-1814",
+    "time_ms": 600000,
+    "wait_after_unfuse_ms": 5000,
+    "porata_items": {"454": 6, "921": 8, "1819": 9},
+    "outfits": [[380, 381, 382], [383, 384, 385], [391, 392, 393], [870, 871, 872], [873, 874, 875], [867, 868, 869],
+                [1866, 1859, 1860], [1861, 1864, 1865], [1856, 1859, 1860]]
+  },
+
+  "pet": {
+    "_src": "services/PetService.java:229-329, player/Pet.java:30-31,573-594,756-765,947-1095, services/InventoryService.java:296-395,437-459",
+    "stamina_max": 1000,
+    "skill1": [0, 2, 4],
+    "skill_power": [150000000, 1500000000, 20000000000, 40000000000],
+    "skill2": [[1, 33], [3, 33], [5, 34]],
+    "skill3": [[6, 30], [8, 40], [9, 30]],
+    "skill4": [[13, 10], [12, 70], [19, 20]],
+    "skill5": [24, 26, 25],
+    "skill5_types": [2, 3, 4],
+    "skill2_cooldown_ms": 1000,
+    "def_base": [9, 50],
+    "crit_base": [0, 2],
+    "melee_range": 50,
+    "skill_range": 300,
+    "points_per_second": 20,
+    "ask_pea_ms": 10000,
+    "pea_stamina_per_level": 100,
+    "equip_min_power": 1500000,
+    "equip_types": {"0": 0, "1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "32": 6},
+    "idle_ms": [1800000, 3600000],
+    "attacks_per_stamina": 2,
+    "attacks_per_stamina_charm": 5
+  },
+
+  "stamina": {
+    "_src": "player/NPoint.java:2014-2020, services/SkillService.java:363-391, services_func/UseItem.java:1297-1312",
+    "max": 1000,
+    "attacks_per_point": 500,
+    "regen_ms": 60000,
+    "grape_full": 211,
+    "grape_part": 212,
+    "grape_part_pct": 20,
+    "grape_max_pct": 50
+  },
+
+  "oai_hung": {
+    "_src": "mob/Mob.java:147-150,475: lvMob is the leader flag and practically never set outside dungeons, which are excluded",
+    "leader_mobs": []
+  },
+
+  "bag": {"_src": "services/InventoryService.java:781-790, player/Inventory.java:21", "item": 517, "max": 80},
+
+  "revenge": {
+    "_src": "matches/PVPService.java:234-279, matches/TraThu.java:19-66, services/FriendAndEnemyService.java:63-96,229-315, player/Player.java:1293-1297",
+    "gem": 1,
+    "window_ms": 300000,
+    "start_delay_ms": 3000,
+    "max_enemies": 50
+  },
+
+  "sets": {
+    "_src": "player/SetClothes.java:80-180, player/NPoint.java:447-456,535-543,730-734",
+    "options": {
+      "129": "songoku", "141": "songoku", "127": "thien_xin_hang", "139": "thien_xin_hang",
+      "128": "kirin", "140": "kirin", "131": "oc_tieu", "143": "oc_tieu",
+      "132": "pikkoro_daimao", "144": "pikkoro_daimao", "130": "picolo", "142": "picolo",
+      "135": "nappa", "138": "nappa", "133": "kakarot", "136": "kakarot",
+      "134": "cadic", "137": "cadic", "253": "kaioken", "250": "lien_hoan",
+      "252": "giam_sat_thuong", "255": "giam_sat_thuong",
+      "245": "than_vu_tru_kaio", "246": "than_vu_tru_kaio", "247": "than_vu_tru_kaio", "248": "than_vu_tru_kaio",
+      "237": "nail", "238": "nail", "239": "nail", "240": "nail",
+      "241": "cadic_m", "242": "cadic_m", "243": "cadic_m", "244": "cadic_m"
+    },
+    "worldcup_items": [966, 982, 983, 883, 904]
+  },
+
+  "craft": {
+    "hole": {"_src": "combine/CuongHoaLoSaoPhaLe.java:18-199", "gold": 500000000, "hematite": 1423, "punch": 1438,
+             "slot_option": 107, "star_option": 102, "unlock_option": 228, "mark_option": 218, "rate_9": 25},
+    "star_up": {"_src": "combine/NangCapSaoPhaLe.java:19-145", "gold": 200000000, "gem": 10, "rate": 50, "hematite": 1423,
+                "from": [441, 447], "to_base": 1416},
+    "star_polish": {"_src": "combine/DanhBongSaoPhaLe.java:19-110", "gold": 100000000, "rate": 100, "stone": 1439,
+                    "from": [1416, 1422], "to_base": 1426, "need": 2},
+    "angel": {"_src": "combine/CheTaoTrangBiThienSu.java:140-170, item/Item.java:168-180,419-433", "gold": 500000000,
+              "base": [650, 662], "piece": [1066, 1070], "piece_min": 5, "piece_take": 99},
+    "angel_vip": {"_src": "combine/CheTaoTrangBiThienSu.java:21-136, item/Item.java:375-381,491-497", "gold": 10000000,
+                  "recipe_ids": [1071, 1072, 1073, 1084, 1085, 1086], "piece_need": 999, "upgrade": [1074, 1078],
+                  "lucky": [1079, 1083], "base_rate": 90, "lucky_base": 5, "bonus_options": [50, 77, 103, 94, 5]},
+    "angel_items": [[1048, 1051, 1054, 1057, 1060], [1049, 1052, 1055, 1058, 1061], [1050, 1053, 1056, 1059, 1062]],
+    "piece_type": {"1066": 0, "1067": 1, "1070": 2, "1068": 3, "1069": 4},
+    "convert": {"_src": "combine/ChuyenHoaTrangBi_Vang.java:17-195, combine/ChuyenHoaTrangBi_Ngoc.java", "gold": 2000000000, "gem": 5000,
+                "min_level": 4, "base_ids": [241, 253, 265, 277, 281, 237, 249, 261, 273, 233, 245, 257, 269],
+                "god": [555, 567], "god_gem": [555, 563], "base_stats": [0, 6, 7, 14, 22, 23, 47]}
+  },
+
+  "god_box": {
+    "_src": "services_func/UseItem.java:839-841,1950-2004, services/RewardService.java:215-1008 (initChiSoItem)",
+    "item": 1775,
+    "items": [[555, 556, 562, 563, 561], [557, 558, 564, 565, 561], [559, 560, 566, 567, 561]],
+    "stats": {
+      "555": [[47, 700], [21, 15]], "557": [[47, 600], [21, 15]], "559": [[47, 800], [21, 15]],
+      "556": [[22, 65], [27, 10000], [21, 15]], "558": [[22, 55], [27, 10000], [21, 15]], "560": [[22, 60], [27, 10000], [21, 15]],
+      "562": [[0, 3200], [21, 17]], "564": [[0, 3000], [21, 17]], "566": [[0, 3500], [21, 17]],
+      "563": [[23, 40], [28, 10000], [21, 14]], "565": [[23, 60], [28, 10000], [21, 14]], "567": [[23, 50], [28, 10000], [21, 14]],
+      "561": [[14, 16], [21, 18]]
+    }
+  }
+}

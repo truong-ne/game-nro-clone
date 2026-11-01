@@ -1,0 +1,42 @@
+{
+  "_comment": "Timed item buffs (ItemTime.java / UseItem.useItemTime), charms (Charms.java), intrinsic costs (IntrinsicService.java) and radar card drops. Loaded by buffs_common.go.",
+
+  "items": [
+    {"id": 381,  "key": "cuong_no",   "name": "Cuồng nộ",          "minutes": 10, "group": "cuong_no", "dmg_pct": 100},
+    {"id": 1150, "key": "cuong_no2",  "name": "Cuồng nộ 2",        "minutes": 10, "group": "cuong_no", "dmg_pct": 120},
+    {"id": 382,  "key": "bo_huyet",   "name": "Bổ huyết",          "minutes": 10, "group": "bo_huyet", "hp_pct": 100},
+    {"id": 1152, "key": "bo_huyet2",  "name": "Bổ huyết 2",        "minutes": 10, "group": "bo_huyet", "hp_pct": 120},
+    {"id": 383,  "key": "bo_khi",     "name": "Bổ khí",            "minutes": 10, "group": "bo_khi", "mp_pct": 100},
+    {"id": 1151, "key": "bo_khi2",    "name": "Bổ khí 2",          "minutes": 10, "group": "bo_khi", "mp_pct": 120},
+    {"id": 384,  "key": "giap_xen",   "name": "Giáp Xên bọ hung",  "minutes": 10, "group": "giap_xen", "taken_pct": 50},
+    {"id": 1153, "key": "giap_xen2",  "name": "Giáp Xên bọ hung 2","minutes": 10, "group": "giap_xen", "taken_pct": 40},
+    {"id": 385,  "key": "an_danh",    "name": "Ẩn danh",           "minutes": 10, "max_minutes": 30},
+    {"id": 1154, "key": "an_danh2",   "name": "Ẩn danh 2",         "minutes": 10, "max_minutes": 40},
+    {"id": 379,  "key": "may_do",     "name": "Máy dò Capsule kì bí", "minutes": 30},
+    {"id": 579,  "key": "duoi_khi",   "name": "Đuôi khỉ",          "minutes": 30, "group": "duoi_khi", "power_extra": 2},
+    {"id": 1045, "key": "duoi_khi",   "name": "Đuôi khỉ",          "minutes": 30, "group": "duoi_khi", "power_extra": 2},
+    {"id": 663,  "key": "meal",       "name": "Thức ăn",           "minutes": 10, "dmg_pct": 10},
+    {"id": 664,  "key": "meal",       "name": "Thức ăn",           "minutes": 10, "dmg_pct": 10},
+    {"id": 665,  "key": "meal",       "name": "Thức ăn",           "minutes": 10, "dmg_pct": 10},
+    {"id": 666,  "key": "meal",       "name": "Thức ăn",           "minutes": 10, "dmg_pct": 10},
+    {"id": 667,  "key": "meal",       "name": "Thức ăn",           "minutes": 10, "dmg_pct": 10}
+  ],
+
+  "may_do": {"mob_from": 58, "mob_to": 65, "chance": 20, "item": 380},
+
+  "charms": {
+    "213": "tri_tue", "214": "manh_me", "215": "da_trau", "216": "oai_hung", "217": "bat_tu",
+    "218": "deo_dai", "219": "thu_hut", "522": "de_tu", "671": "tri_tue3", "672": "tri_tue4"
+  },
+  "charm_shop_minutes": {"BUA_1H": 60, "BUA_8H": 480, "BUA_1M": 43200},
+  "charm_default_minutes": 60,
+
+  "intrinsic": {
+    "npcs": [0, 1, 2],
+    "cost_open_million": [10, 20, 40, 80, 160, 320, 640, 1280],
+    "vip_gem": 100,
+    "min_power": 10000000000
+  },
+
+  "radar": {"drop_chance": 1.0}
+}

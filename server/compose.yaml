@@ -1,0 +1,72 @@
+name: nro-go
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: nro
+      POSTGRES_PASSWORD: ${PG_PASSWORD:-nro}
+      POSTGRES_DB: nro
+    ports:
+      - "127.0.0.1:55432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U nro -d nro]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
+  # One-shot: apply schema and import templates from the legacy dump.
+  #   docker compose run --rm migrate
+  migrate:
+    build: .
+    command: ["/app/nro-migrate", "-dump", "/legacy/database team2026.sql", "-data", "/legacy/SRC/data"]
+    environment:
+      DATABASE_URL: postgres://nro:${PG_PASSWORD:-nro}@postgres:5432/nro?sslmode=disable
+    volumes:
+      - ../database team2026.sql:/legacy/database team2026.sql:ro
+      - ../SRC/data/map:/legacy/SRC/data/map:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+    profiles: [tools]
+
+  gameserver:
+    build: .
+    command: ["/app/nro-server"]
+    environment:
+      DATABASE_URL: postgres://nro:${PG_PASSWORD:-nro}@postgres:5432/nro?sslmode=disable
+      LISTEN_ADDR: ":8765"
+      ASSET_DIR: /data
+    volumes:
+      - ../SRC/data:/data:ro
+    ports:
+      - "127.0.0.1:8765:8765"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # Debug renderer: RENDER_OUT=<dir> docker compose run --rm render map 0
+  render:
+    build: .
+    entrypoint: ["/app/nro-render", "-data", "/data", "-out", "/out"]
+    environment:
+      DATABASE_URL: postgres://nro:${PG_PASSWORD:-nro}@postgres:5432/nro?sslmode=disable
+    volumes:
+      - ../SRC/data:/data:ro
+      - ${RENDER_OUT:-./render}:/out
+    depends_on:
+      postgres:
+        condition: service_healthy
+    profiles: [tools]
+
+  # Smoke/load test client: docker compose run --rm bot -n 20
+  bot:
+    build: .
+    entrypoint: ["/app/nro-bot", "-url", "ws://gameserver:8765/ws"]
+    depends_on: [gameserver]
+    profiles: [tools]
+
+volumes:
+  pgdata:

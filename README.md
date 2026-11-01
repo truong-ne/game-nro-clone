@@ -2,6 +2,14 @@
 
 Archive of the existing Java server, Unity client build, game assets, libraries and Docker setup. This is the original baseline for a possible Godot + Go rebuild.
 
+## Godot + Go rewrite (in progress)
+
+- `server/`: new Go game server (WebSocket + HTTP), PostgreSQL schema and migration tool that imports game templates from `database team2026.sql` and `SRC/data`.
+- `client/`: new Godot 4 client.
+- `docs/REWRITE_PLAN.md`: architecture, milestones, current progress, what is not ported yet, and how to run everything (Vietnamese).
+
+Quick start: `cd server && docker compose up -d postgres && docker compose --profile tools run --rm --build migrate && docker compose up -d --build gameserver`, then open `client/` with Godot 4.4+ and press F5.
+
 - `SRC/src`: Java server source.
 - `SRC/20.jar`, `SRC/lib`, `SRC/dist`, `SRC/build`: existing binaries and build outputs.
 - `SRC/data`: server game assets.

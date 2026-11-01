@@ -1,0 +1,66 @@
+# Production stack: Postgres + game server behind Caddy (automatic HTTPS/WSS).
+#   cp .env.example .env   # set DOMAIN, PG_PASSWORD, ADMIN_TOKEN
+#   docker compose -f compose.prod.yaml up -d --build
+#   docker compose -f compose.prod.yaml --profile tools run --rm migrate
+# Clients connect to https://$DOMAIN (the Godot client derives wss:// from it).
+name: nro-prod
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: nro
+      POSTGRES_PASSWORD: ${PG_PASSWORD:?set PG_PASSWORD}
+      POSTGRES_DB: nro
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U nro -d nro]
+      interval: 5s
+      retries: 30
+    restart: unless-stopped
+
+  migrate:
+    build: .
+    command: ["/app/nro-migrate", "-dump", "/legacy/database team2026.sql", "-data", "/legacy/SRC/data"]
+    environment:
+      DATABASE_URL: postgres://nro:${PG_PASSWORD}@postgres:5432/nro?sslmode=disable
+    volumes:
+      - ../database team2026.sql:/legacy/database team2026.sql:ro
+      - ../SRC/data/map:/legacy/SRC/data/map:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+    profiles: [tools]
+
+  gameserver:
+    build: .
+    environment:
+      DATABASE_URL: postgres://nro:${PG_PASSWORD}@postgres:5432/nro?sslmode=disable
+      LISTEN_ADDR: ":8765"
+      ASSET_DIR: /data
+      ADMIN_TOKEN: ${ADMIN_TOKEN:?set ADMIN_TOKEN}
+      EXP_RATE: ${EXP_RATE:-1}
+    volumes:
+      - ../SRC/data:/data:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+    stop_grace_period: 30s # players are saved on SIGTERM
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:2.8-alpine
+    environment:
+      DOMAIN: ${DOMAIN:?set DOMAIN}
+    command: ["caddy", "reverse-proxy", "--from", "${DOMAIN}", "--to", "gameserver:8765"]
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - caddy:/data
+    depends_on: [gameserver]
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  caddy:
